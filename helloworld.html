@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script>
+
+      alert("Hello");
+      function ask() {
+          var pizza = prompt("Do you like pizza?");
+
+          if (pizza=="yes") {
+            alert("Good choice")
+            var bob = prompt("Now, would you like to 'stay in bed', or 'get out of bed'");
+            if (bob=="stay in bed") {
+              alert("You overslept. The world has been taken over by zombies. Your dead. Please hit enter to restart.")
+              alert("Hello");
+              ask();
+            }
+          else if (bob="get out of bed"){
+var gg = prompt("Ok. You get up. You walk towards the door. You open it. You see a zombie rip someone's head off. You quickly close the door. Now, do you 'grab a knife' or 'lock myself in'?")
+if (gg=="lock myself in")
+alert("Now you will die in two months. Press enter to restart.");
+alert("Hello");
+ask();
+else if (gg=="lock my self in"){
+  alert(After 2 months you died of starvation. Press enter to restart.)
+}
+else {
+  alert("your choice is invalid. Press enter to restart.")
+  alert("Hello");
+  ask()
+}
+}
+}
+else if (pizza=="no") {
+alert("Nobody loves you")
+alert("Unfortunately, you now run out of energy because of your pickiness. Now you are dead. Please hit enter to restart.")
+alert("Hello");
+ask()
+}
+else {
+  alert("Please try again")
+  ask()
+}
+}
+ask()
+
+</script>
+</head>
+<body>
+</body>
+</html>
