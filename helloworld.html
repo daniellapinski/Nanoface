@@ -9,68 +9,69 @@
 
             if (pizza == "yes") {
                 alert("Good choice");
-            }
-            else if (pizza == "no") {
+                zom();
+            } else if (pizza == "no") {
                 alert("Nobody loves you...")
-                alert("hello");
                 ask();
-            }
-             else {
+            } else {
                 alert("your choice is invalid. Press enter to restart.");
-                alert("Hello");
                 ask();
             }
-          }
+        }
+
         function zom() {
-             var bob = prompt("Now, would you like to 'stay in bed', or 'get out of bed'");
+            var bob = prompt("Now, would you like to \"stay in bed\", or \"get out of bed\"");
 
-             if (bob == "stay in bed") {
-                 alert("You overslept. The world has been taken over by zombies. Your dead. Please hit enter to restart.")
-                 alert("Hello");
-                 ask();
-             }
-             else if (bob == "get out of bed") {
-               alert("Ok. Good job")
+            if (bob == "stay in bed") {
+                alert("You overslept. The world has been taken over by zombies. Your dead. Please hit enter to restart.")
+                  zom();
+            } else if (bob == "get out of bed") {
+                alert("Ok. Good job!")
+                gl();
 
-             }
-             else {
-               alert("your choice is invalid. Press enter to restart.");
-               alert("Hello");
-               ask();
-             }
-           }
+            } else {
+                alert("your choice is invalid. Press enter to try again.");
+                zom();
+            }
+        }
 
         function gl() {
-               var gg = prompt("Ok. You get up. You walk towards the door. You open it. You see a zombie rip someone's head off. You quickly close the door. Now, do you 'grab a knife' or 'lock myself in'?");
+            var gg = prompt("Ok. You get up. You walk towards the door. You open it. You see a zombie rip someone's head off. You quickly close the door. Now, do you \"grab a knife\" or \"lock myself in\"?");
 
-               if (gg == "grab a knife") {
-                 alert("You are about to kill a zombie. How do you feel?")
-               }
-               else if (gg == "lock myself in"){
-               alert("You will die of starvation in two months. You are not very bright...")
-             }
-             else {
-               alert("your choice is invalid. Press enter to restart.");
-               alert("Hello");
-               ask();
-             }
+            if (gg == "grab a knife") {
+                feel();
+            } else if (gg == "lock myself in") {
+                alert("You will die of starvation in two months. You are not very bright...")
+                gl();
+            } else {
+                alert("your choice is invalid. Press enter to restart.");
+                gl();
+            }
+        }
+        function feel() {
+            var fl = prompt("You are about to kill a zombie. How do you feel? \"scared\" or \"brave\"?");
 
-
-            var gg =
-                if (gg == "lock myself in") {
-                    alert("Now you will die in two months. Press enter to restart.");
-                    alert("Hello");
-                    ask();
-                }
-
-
-
-
-      }
+            if (fl == "scared") {
+                alert("You were so scared you never opened the door again. When a zombie came in, you dropped the knife and got your head eaten off. Congrats!")
+                feel()
+            } else if (fl == "brave") {
+            wyd()
+            } else {
+                alert("your choice is invalid. Press enter to try again...");
+                feel();
+            }
+        }
+        function wyd() {
+          var bb = prompt("You will be rewarded for your bravery. You killed the zombie and ran to a nearby house. WYD? \"look for supplies\" or \"stay the night\"")
+        }
 
         ask();
-        zom();
     </script>
+    <style>
+    body {
+    background-image: url("http://more-sky.com/data/out/7/IMG_176601.jpg");
+  }
+    </style>
 </head>
 
 <body>
