@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <style>
+  body {
+    font-family: Helvetica;
+    text-align: center;
+  }
+  #card {
+    width: 500px;
+    padding: 120px 0;
+    margin: 50px auto;
+    border: 5px solid gold;
+    border-radius:5px;
+    font-size: 18px;
+  }
+
+</style>
+
+</head>
+
+<body>
+    <div id="card"></div>
+  <input type="text" id="answer" autofocus></input>
+<button onclick = "checkAnswer();">Submit</button>
+<script>
+var panda = [
+  "What is the tallest building in the world?",
+  "Who sings 'Sorry'?",
+  "What month was Micheal Jackson born in?"
+];
+var answers = [
+  "Burj Khalifa",
+  "Justin Bieber",
+  "August"
+];
+function checkAnswer(){
+  var input = document.getElementById("answer");
+  var userAnswer = input.value;
+
+  if (userAnswer === answers[0]) {
+alert("Correct.Exemplary job...")
+  } else {
+    alert("Sorry. Maybe next time...")
+  }
+}
+var cdar = document.getElementById("card");
+cdar.textContent = panda[0];
+</script>
+</body>
+
+</html>
