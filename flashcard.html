@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script>
+        alert("Are you ready for the ultimate test?");
+        alert("Just remember to write all of your answers in ALL CAPS...");
+
+        function ask() {
+            var song = prompt("Who sang the song 'Sorry'?");
+
+            if (song == "JUSTIN BIEBER") {
+                alert("Correct!!!");
+                zom()
+                else {
+                    alert("You answered this question incorrectly. Press enter to restart.");
+                    ask();
+                }
+            }
+
+            function zom() {
+                var bob = prompt("What is the tallest building in the world?");
+
+                if (bob == "BURJ KHALIFA") {
+                    alert("Correct!")
+                }
+
+            } else {
+                alert("Incorrect. Press enter to try again.");
+                zom();
+            }
+        }
+
+
+
+        ask();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
