@@ -34,16 +34,26 @@ var answers = [
   "Justin Bieber",
   "August"
 ];
+
+var currentQuestion = 0;
+
 function checkAnswer(){
   var input = document.getElementById("answer");
   var userAnswer = input.value;
 
-  if (userAnswer === answers[0]) {
-alert("Correct.Exemplary job...")
+  if (userAnswer === answers[currentQuestion]) {
+    alert("Correct.Exemplary job...")
+    nextQuestion()
   } else {
     alert("Sorry. Maybe next time...")
   }
 }
+
+function nextQuestion() {
+  currentQuestion = currentQuestion + 1;
+  document.getElementById("card").textContent = panda[currentQuestion]
+}
+
 var cdar = document.getElementById("card");
 cdar.textContent = panda[0];
 </script>
