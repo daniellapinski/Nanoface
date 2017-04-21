@@ -6,7 +6,13 @@
   <script>
   function start(){
     Crafty.init();
-    
+
+    var player = Crafty.e("2D, DOM, Color");
+    player.x = 660;
+    player.y = 300;
+    player.w = 50;
+    player.h = 50;
+    player.color("Fuchsia")
   }
 
   window.onload = start;
