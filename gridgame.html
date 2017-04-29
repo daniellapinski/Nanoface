@@ -1,12 +1,21 @@
 <html>
 
 <head>
-    <script src="https://cdn.rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
-    <style>
-        body {
-            background-image: url("http://www.planwallpaper.com/static/images/cool-background.jpg");
-        }
-    </style>
+
+    <head>
+        <script src="https://cdn.rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+        <style>
+            body {
+                background-image: url("http://www.planwallpaper.com/static/images/cool-background.jpg");
+            }
+
+            body {
+                background-image: url("http://www.planwallpaper.com/static/images/cool-background.jpg");
+            }
+        </style>
+    </head>
+
+    <body>
 </head>
 
 <body>
@@ -16,72 +25,109 @@
             alert("Good Job My Dude");
         }
 
-
-
         function start() {
             Crafty.init();
 
-            var floor1 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision");
+
+            var floor1 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
             floor1.attr({
-                x: 0,
-                y: 300,
+                x: 15,
+                y: 529,
                 w: 200,
                 h: 10
             });
-            floor1.color("DeepPink");
+            floor1.color("blue");
 
-            var player = Crafty.e("Player, 2D, DOM, Color, Twoway, Gravity");
+            var player = Crafty.e("Player, 2D, DOM, Color, Twoway, Gravity, Canvas");
             player.attr({
                 x: 100,
                 y: 100,
                 w: 50,
                 h: 50
             });
-
+            player.color("White")
             player.twoway(200);
             player.gravity("Floor");
-            player.color("White");
 
-            var floor2 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision");
+            var floor2 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
             floor2.attr({
-                x: 500,
-                y: 450,
+                x: 253,
+                y: 453,
                 w: 200,
                 h: 10
             });
-            floor2.color("DeepPink");
+            floor2.color("blue");
 
-            var floor3 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision");
+            var floor3 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
             floor3.attr({
-                x: 850,
-                y: 290,
+                x: 323,
+                y: 722,
                 w: 200,
                 h: 10
             });
-            floor3.color("DeepPink");
+            floor3.color("blue");
 
-            var floor4 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision");
+            var floor4 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
             floor4.attr({
-                x: 850,
-                y: 290,
-                w: 10,
-                h: 200
+                x: 626,
+                y: 853,
+                w: 200,
+                h: 10
             });
-            floor4.color("DeepPink");
+            floor4.color("blue");
 
+            var floor5 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
+            floor5.attr({
+                x: 241,
+                y: 997,
+                w: 200,
+                h: 10
+            });
+            floor5.color("blue");
+            var floor3 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
+            floor3.attr({
+                x: 623,
+                y: 722,
+                w: 200,
+                h: 10
+            });
+            floor3.color("red");
 
+            var floor4 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
+            floor4.attr({
+                x: 926,
+                y: 853,
+                w: 200,
+                h: 10
+            });
+            floor4.color("red");
+
+            var floor5 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
+            floor5.attr({
+                x: 241,
+                y: 1297,
+                w: 200,
+                h: 10
+            });
+            floor5.color("red");
+
+            var floor6 = Crafty.e("Floor, 2D, DOM, Color, Solid, Collision, Canvas");
+            floor6.attr({
+                x: 644,
+                y: 389,
+                w: 3000,
+                h: 10
+            });
+            floor6.alpha = 0
 
 
             var goal = Crafty.e("2D, DOM, Color, Solid, Collision");
             goal.attr({
-                x: 950,
-                y: 550,
+                x: 2125,
+                y: 269,
                 w: 20,
                 h: 20
             });
-
-
-
             goal.color("black");
 
             goal.onHit("Player", hit);
@@ -89,6 +135,7 @@
         }
         window.onload = start;
     </script>
+</body>
 </body>
 
 </html>
